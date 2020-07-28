@@ -22,6 +22,40 @@ Create an application that can be used to write, save, and delete notes. This ap
 
   * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
+* Notes
+    * get, write, save, and delete notes
+    * express backend
+    * JSON file
+    * BUILD BACKEND ONLY
+    * Routes
+        * html
+            * get /notes -> notes.html
+            * get * -> index.html
+        * api
+            * get /api/notes -> get all notes and send back as JSON
+            * post /api/notes -> save new note
+            * delete /api/notes/:id -> delete note
+    * Deploy on Heroku
+    * Submission
+        * URL Heroku
+        * URL Git repo
+* Tasks
+    * Create server.js
+    * Create htmlRoutes and use it in the server.js
+    * Implement htmlRoutes
+        * html
+            * get /notes -> notes.html
+            * get * -> index.html
+    * Create apiRoutes and use it in the server.js
+    * Implement apiRoutes
+        * api
+            * get /api/notes -> get all notes and send back as JSON
+            * post /api/notes -> save new note
+            * delete /api/notes/:id -> delete note
+    * Deploy on Heroku
+    * Create README.md file
+    * Submit
+
 ## User Story
 
 AS A user, I want to be able to write and save notes
@@ -78,3 +112,5 @@ You are required to submit the following:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
