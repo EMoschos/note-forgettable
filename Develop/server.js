@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const fs = require("fs");
 const notes = require("./db/db.json");
-// let notes = fs.readFileSync("./db/db.json");//This needs to go to the db.json file and retrieve data
+
 const PORT =  process.env.PORT || 3000; //Don't for get to add the heroku path "process.env.PORT ||"
 
 app.use(express.static(__dirname + '/public'));
