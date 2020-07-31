@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require("fs");
-const notes = require("./db/db.json");
+let notes = require("./db/db.json");
 
 const PORT =  process.env.PORT || 3000; //Don't for get to add the heroku path "process.env.PORT ||"
 
@@ -26,14 +26,16 @@ app.get("/notes", (req, res) => {
 
 // //API route to notes
 app.get("/api/notes", (req, res) => {
-    res.json(notes)
+    res.sendFile(path.join(__dirname, "./db/db.json"))
+    // res.json(notes)
+    console.log("api route")
     console.log(notes)
 });
 
 // //Save new note
 app.post("/api/notes", (req, res) => {
     let newNote = {
-        id: notes.length + 1,
+        id: notes.length * Math.random(),
         title: req.body.title,
         text: req.body.text
     };
@@ -44,6 +46,8 @@ app.post("/api/notes", (req, res) => {
     fs.writeFileSync("./db/db.json", JSON.stringify(noteList));
 
     res.json(noteList)
+    console.log("Save note")
+    
 });
 
 app.delete("/api/notes/:id", (req, res) => {
@@ -51,9 +55,10 @@ app.delete("/api/notes/:id", (req, res) => {
     let noteList = JSON.parse(fs.readFileSync(path.join(__dirname,"./db/db.json"),"utf-8"))
     let rmNote = noteList.filter(noteList => {
         return noteList.id != delNote});
-        
+
     fs.writeFileSync("./db/db.json",JSON.stringify(rmNote))
     res.json(rmNote);
+    console.log("I'm deleted")
 });
 
 app.listen(PORT, function () {
