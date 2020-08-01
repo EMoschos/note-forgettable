@@ -1,116 +1,63 @@
-# Unit 11 Express Homework: Note Taker
+# NOTE_FORGETTABLE ![License](https://img.shields.io/static/v1?label=Licesne&message=GPL-2.0&color=green)
+  
 
-## Description
+  ## Description ✏️
+  
+  Note taking application that allows you to save and delete notes with a title and text
+  
+  ## Table of Contents 📚
+  
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#Contributing)
+  * [Testing](#Testing)
+  * [Questions](#Questions)
+  
+  ## Installation 
 
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
+  📥 
+  [Click Here](https://lit-river-83773.herokuapp.com/) to access and use the app through Heroku. 
+  
 
-* The application frontend has already been created, it's your job to build the backend and connect the two.
+![Home Page of the Note App](./Develop/public/assets/pics/homepage.PNG)
 
-* The following HTML routes should be created:
+  ## Usage 
 
-  * GET `/notes` - Should return the `notes.html` file.
+  ```
+  ▶️ 
+  Click on the link to the deployed heroku app in the installation section or use link https://lit-river-83773.herokuapp.com/.
+  Enter Title and Text into the text areas and press the 'Save' button.  The note will be added to the list.  
+  You can choose to delete the note or view it on the main display where you would put a new note.  
+  If you have viewed a not and want to create another one, simply click on the 'pencil' icon on the top right and the text areas will be cleared aloowing the input of another note.
+  ```
+![Enter Note app in action!](./Develop/public/assets/pics/enterNote.PNG)
 
-  * GET `*` - Should return the `index.html` file
+![Save Note app in action!](./Develop/public/assets/pics/saveNotes.PNG)
 
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
+  ## License 
+  
+  📜 License Code: GPL-2.0
 
-* The following API routes should be created:
+  For detailed information on license [Click Here](https://opensource.org/licenses/GPL-2.0)
+  
+  ## Contributing
+  
+  👌 
+  Not currently allowing contributions from others
+  
+  ## Testing 
 
-  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
+  ```
+  ✔️ 
+  Ensure once the note areas have been populated and the save button clicked, the note should appear in the list on the left-hand side
+  ```
 
-  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+  ## Questions 
+  
+  Direct questions to me via email 📧 at [tmoschos@bigpond.com](tmoschos@bigpond.com).  Please use "NOTE_FORGETTABLE questions" in the subject and I will hopefully return a response within 48hrs.
 
-  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
-
-* Notes
-    * get, write, save, and delete notes
-    * express backend
-    * JSON file
-    * BUILD BACKEND ONLY
-    * Routes
-        * html
-            * get /notes -> notes.html
-            * get * -> index.html
-        * api
-            * get /api/notes -> get all notes and send back as JSON
-            * post /api/notes -> save new note
-            * delete /api/notes/:id -> delete note
-    * Deploy on Heroku
-    * Submission
-        * URL Heroku
-        * URL Git repo
-* Tasks
-    * Create server.js
-    * Create htmlRoutes and use it in the server.js
-    * Implement htmlRoutes
-        * html
-            * get /notes -> notes.html
-            * get * -> index.html
-    * Create apiRoutes and use it in the server.js
-    * Implement apiRoutes
-        * api
-            * get /api/notes -> get all notes and send back as JSON
-            * post /api/notes -> save new note
-            * delete /api/notes/:id -> delete note
-    * Deploy on Heroku
-    * Create README.md file
-    * Submit
-
-## User Story
-
-AS A user, I want to be able to write and save notes
-
-I WANT to be able to delete notes I've written before
-
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-
-## Business Context
-
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
-
-## Acceptance Criteria
-
-Application should allow users to create and save notes.
-
-Application should allow users to view previously saved notes.
-
-Application should allow users to delete previously saved notes.
-
-## Deploying the App
-
-You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Supplemental/HerokuGuide.md) for getting your app deployed on Heroku.
-
-- - -
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
-
-* The URL of the GitHub repository
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-
+  More information can be found at my [GitHub Profile](https://github.com/EMoschos).
+  
+---
+This README was created by the "Great-Read" 📝 Node.js app.  Developed by Eleftherios Moschos
